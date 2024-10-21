@@ -21,7 +21,6 @@ export const moviesSlice = createSlice({
           
         },
         setLike:(state,action:PayloadAction<{id:number,like:boolean}>)=>{
-        console.log("data",action.payload)
             state.value =  state.value.map((movie) =>{
             if(movie.id === action.payload.id){
 return{
@@ -32,7 +31,6 @@ return{
             return movie
             }
         );
-     // console.log(state)
         },
         setLoading:(state,action:PayloadAction<{value:boolean}>)=>{
             state.loading = action.payload.value;
